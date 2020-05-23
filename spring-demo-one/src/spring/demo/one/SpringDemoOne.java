@@ -16,7 +16,7 @@ public class SpringDemoOne {
      */
     public static void main(String[] args) {
         // create the object
-        BaseballCoach theCoach = new BaseballCoach();
+        Coach theCoach = new TrackCoach();
         
         // Use the object
         System.out.println(theCoach.getDailyWorkout());
