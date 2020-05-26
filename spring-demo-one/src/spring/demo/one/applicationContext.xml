@@ -9,19 +9,14 @@
 
 	
     <!-- Define your beans here -->
-    <!--bean id="myFortuneService"
+    <bean id="myFortuneService"
             class="spring.demo.one.HappyFortuneService">
-    </bean -->
-
-    <bean id="myCoach"
-            class="spring.demo.one.TrackCoach">	 		
     </bean>
 
-    <!--
     <bean id="myCoach"
-        class="spring.demo.one.BaseballCoach">         
+        class="spring.demo.one.BaseballCoach">
+        <constructor-arg ref="myFortuneService" />
     </bean>
-    -->
 
 </beans>
 

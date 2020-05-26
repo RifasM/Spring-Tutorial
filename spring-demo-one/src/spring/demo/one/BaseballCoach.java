@@ -1,6 +1,14 @@
 package spring.demo.one;
 public class BaseballCoach implements Coach{
-    
+
+    // Define a private field for the dependency
+    private FortuneService fortuneService;
+
+    // Define a Constructor for dependency injection
+    public BaseballCoach(FortuneService theFortuneService){
+        fortuneService = theFortuneService;
+    }
+
     @Override
     public String getDailyWorkout(){
         return "Spend 30 minutes on batting practise.";
@@ -8,6 +16,7 @@ public class BaseballCoach implements Coach{
 
     @Override
     public String getDailyFortune() {
-        return null;
+        // Use myFortuneService to get a fortunw
+        return fortuneService.getFortune();
     }
 }
