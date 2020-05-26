@@ -6,7 +6,7 @@ public class BaseballCoach implements Coach{
 
     // Define a Constructor for dependency injection
     public BaseballCoach(FortuneService theFortuneService){
-        fortuneService = theFortuneService;
+        this.fortuneService = theFortuneService;
     }
 
     @Override

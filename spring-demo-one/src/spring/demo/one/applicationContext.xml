@@ -14,7 +14,7 @@
     </bean>
 
     <bean id="myCoach"
-        class="spring.demo.one.BaseballCoach">
+        class="spring.demo.one.TrackCoach">
         <constructor-arg ref="myFortuneService" />
     </bean>
 
