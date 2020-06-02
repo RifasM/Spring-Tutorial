@@ -7,7 +7,9 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	
+    <!-- Load properties file -->
+	<context:property-placeholder location="classpath:spring/demo/one/sport.properties"/>
+
     <!-- Define your beans here -->
     <bean id="myFortuneService"
             class="spring.demo.one.HappyFortuneService">
@@ -24,8 +26,8 @@
         <property name="fortuneService" ref="myFortuneService" />
 
         <!-- Inject literal Values -->
-        <property name="name" value="Jack Sparrow" />
-        <property name="team" value="Team A" />
+        <property name="name" value="${foo.name}" />
+        <property name="team" value="${foo.team}" />
     </bean>
 
 </beans>
