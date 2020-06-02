@@ -1,11 +1,11 @@
 package spring.demo.one;
 
-public class cricketCoach implements Coach{
+public class CricketCoach implements Coach{
     private FortuneService fortuneService;
 
     // No argument Constructor
 
-    public cricketCoach() {
+    public CricketCoach() {
         System.out.println("Inside No argument constructor of Cricket Coach");
     }
 
