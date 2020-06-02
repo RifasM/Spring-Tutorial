@@ -22,6 +22,10 @@
         class="spring.demo.one.CricketCoach">
         <!-- Setting up the injection for setter -->
         <property name="fortuneService" ref="myFortuneService" />
+
+        <!-- Inject literal Values -->
+        <property name="name" value="Jack Sparrow" />
+        <property name="team" value="Team A" />
     </bean>
 
 </beans>
