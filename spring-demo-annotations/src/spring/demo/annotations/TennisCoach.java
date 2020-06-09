@@ -2,7 +2,7 @@ package spring.demo.annotations;
 
 import org.springframework.stereotype.Component;
 
-@Component("theTennisCoach")
+@Component("theTennisCoach")    // beanID which spring calls
 public class TennisCoach implements Coach{
     @Override
     public String getDailyWorkout() {
