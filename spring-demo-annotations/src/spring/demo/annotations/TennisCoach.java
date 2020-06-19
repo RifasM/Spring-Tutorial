@@ -9,8 +9,22 @@ public class TennisCoach implements Coach{
 
     private FortuneService fortuneService;
 
+    /*
+    // Constructor injection
     @Autowired
     public TennisCoach(FortuneService theFortuneService) {
+        this.fortuneService = theFortuneService;
+    }
+     */
+
+    public TennisCoach(){
+        System.out.println("Inside Tennis Coach Default Constructor.");
+    }
+
+    // Setter Injection
+    @Autowired
+    public void setFortuneService(FortuneService theFortuneService) {
+        System.out.println("Inside Setter injection setFortuneService()");
         this.fortuneService = theFortuneService;
     }
 
