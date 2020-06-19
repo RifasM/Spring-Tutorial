@@ -1,6 +1,7 @@
 package spring.demo.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.sql.SQLOutput;
@@ -14,9 +15,11 @@ public class TennisCoach implements Coach{
     private FortuneService fortuneService;
     */
 
+    /*
     // Field Injection
     @Autowired
     private FortuneService fortuneService;
+    */
 
     /*
     // Constructor injection
@@ -25,6 +28,11 @@ public class TennisCoach implements Coach{
         this.fortuneService = theFortuneService;
     }
      */
+
+    // Multiple Dependency Injection
+    @Autowired
+    @Qualifier("happyFortuneService")
+    private FortuneService fortuneService;
 
     public TennisCoach(){
         System.out.println("Inside Tennis Coach Default Constructor.");

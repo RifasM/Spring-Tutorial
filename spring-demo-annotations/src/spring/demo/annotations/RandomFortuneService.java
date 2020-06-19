@@ -1,9 +1,11 @@
 package spring.demo.annotations;
 
-public class RandomFortuneService implements FortuneService
-{
+import org.springframework.stereotype.Component;
+
+@Component
+public class RandomFortuneService implements FortuneService{
     @Override
     public String getFortune() {
-        return null;
+        return "Random Fortune Service!";
     }
 }
