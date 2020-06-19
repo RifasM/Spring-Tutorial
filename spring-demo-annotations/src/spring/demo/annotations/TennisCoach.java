@@ -31,7 +31,7 @@ public class TennisCoach implements Coach{
 
     // Multiple Dependency Injection
     @Autowired
-    @Qualifier("happyFortuneService")
+    @Qualifier("randomFortuneService")
     private FortuneService fortuneService;
 
     public TennisCoach(){
