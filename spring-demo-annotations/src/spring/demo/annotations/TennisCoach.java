@@ -9,6 +9,13 @@ import java.sql.SQLOutput;
 @Component          // default BeanID - tennisCoach
 public class TennisCoach implements Coach{
 
+    /*
+    // Use without @Autowire
+    private FortuneService fortuneService;
+    */
+
+    // Field Injection
+    @Autowired
     private FortuneService fortuneService;
 
     /*
@@ -32,12 +39,14 @@ public class TennisCoach implements Coach{
     }
      */
 
+    /*
     // Method Injection
     @Autowired
     public void methodInjection(FortuneService theFortuneService){
         System.out.println("Inside methodInjection");
         this.fortuneService = theFortuneService;
     }
+     */
 
     @Override
     public String getDailyWorkout() {
